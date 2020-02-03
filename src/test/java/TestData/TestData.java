@@ -11,13 +11,12 @@ import jxl.read.biff.BiffException;
 
 public class TestData {
 
-
-	private static Object[][] testdataProvider() throws FileNotFoundException, IOException, BiffException {
+	public static Object[][] testdataProvider() throws FileNotFoundException, IOException, BiffException {
 		return TestData();
 	}
 
 	public static Object[][] TestData() throws FileNotFoundException, IOException, BiffException {
-		FileInputStream filepath = new FileInputStream("/ShopStarGlobalProject/src/main/resources/TestData.xls");
+		FileInputStream filepath = new FileInputStream("src/test/resources/TestData.xls");
 		Workbook wb = Workbook.getWorkbook(filepath);
 		Sheet sheet = wb.getSheet("testData");
 		 

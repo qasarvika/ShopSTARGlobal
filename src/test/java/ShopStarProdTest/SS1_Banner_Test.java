@@ -23,7 +23,6 @@ public class SS1_Banner_Test {
 	public WebDriver driver;
 	
 
-		
 	@DataProvider(name="TestData")
 	public Object[][] TestData() throws Exception
 	{
@@ -33,7 +32,7 @@ public class SS1_Banner_Test {
 	
 	@BeforeMethod
 	public void BrowserOpen() throws InterruptedException {
-		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\NTimilsi\\eclipse-workspace\\SS2GlobalProjects\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		//driver.get("http://www.google.com"); 
@@ -54,8 +53,8 @@ public class SS1_Banner_Test {
 		driver.quit(); 	
 	}
 
-	@Test (priority=1, enabled=true,dataProvider="TestData") 
-	public void SS1_BannerTest(String TestCase,String storeid, String url) throws Exception {
+	@Test (priority=1,enabled=true,dataProvider="TestData") 
+	public void SS1_BannerTest(String TestCase, String url) throws Exception {
 		
 		// Create object of SimpleDateFormat class and decide the format
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
